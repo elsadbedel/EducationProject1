@@ -1,2 +1,2 @@
-# EducationProject1
-BASIC ERP
+## EducationProject
+# Academy Control System
