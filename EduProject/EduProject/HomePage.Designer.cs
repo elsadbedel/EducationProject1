@@ -129,6 +129,7 @@
             this.cmbxHomePAgeUserType.Name = "cmbxHomePAgeUserType";
             this.cmbxHomePAgeUserType.Size = new System.Drawing.Size(139, 21);
             this.cmbxHomePAgeUserType.TabIndex = 10;
+            this.cmbxHomePAgeUserType.SelectedIndexChanged += new System.EventHandler(this.cmbxHomePAgeUserType_SelectedIndexChanged);
             // 
             // panel1
             // 

@@ -13,7 +13,7 @@ namespace EduProject
 {
     public partial class RegistrationForm : Form
     {
-        EducationProject01Entities db = new EducationProject01Entities();
+        EducationProjectEntities2 db = new EducationProjectEntities2();
         public RegistrationForm()
         {
             InitializeComponent();

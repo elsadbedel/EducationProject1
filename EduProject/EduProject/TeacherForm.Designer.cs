@@ -66,12 +66,12 @@
             this.showResourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qaynaqlarinLinklerionlineQaynaqlardirsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadFilepdfFormatdadirsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SecondPanel = new System.Windows.Forms.Panel();
+            this.PanelPersonalInfo = new System.Windows.Forms.Panel();
             this.panelLibrary = new System.Windows.Forms.Panel();
             this.dgwLibrary = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnLibraryUpload = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnLibraryAdd = new System.Windows.Forms.Button();
             this.txtbItemType = new System.Windows.Forms.TextBox();
             this.txtbLibraryItemUrl = new System.Windows.Forms.TextBox();
             this.txtbLibraryItemName = new System.Windows.Forms.TextBox();
@@ -89,15 +89,23 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            this.SecondPanel.SuspendLayout();
+            this.PanelPersonalInfo.SuspendLayout();
             this.panelLibrary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwLibrary)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -115,7 +123,7 @@
             this.libraryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(933, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(926, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -378,56 +386,58 @@
             this.downloadFilepdfFormatdadirsaToolStripMenuItem.Size = new System.Drawing.Size(431, 22);
             this.downloadFilepdfFormatdadirsaToolStripMenuItem.Text = "Download File  (pdf formatdadirsa)";
             // 
-            // SecondPanel
+            // PanelPersonalInfo
             // 
-            this.SecondPanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.SecondPanel.Controls.Add(this.panelLibrary);
-            this.SecondPanel.Controls.Add(this.button2);
-            this.SecondPanel.Controls.Add(this.txtPicture);
-            this.SecondPanel.Controls.Add(this.groupBox1);
-            this.SecondPanel.Controls.Add(this.label1);
-            this.SecondPanel.Controls.Add(this.button1);
-            this.SecondPanel.Controls.Add(this.pictureBox1);
-            this.SecondPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SecondPanel.Location = new System.Drawing.Point(0, 0);
-            this.SecondPanel.Name = "SecondPanel";
-            this.SecondPanel.Size = new System.Drawing.Size(933, 456);
-            this.SecondPanel.TabIndex = 1;
+            this.PanelPersonalInfo.BackColor = System.Drawing.Color.CadetBlue;
+            this.PanelPersonalInfo.Controls.Add(this.panelLibrary);
+            this.PanelPersonalInfo.Controls.Add(this.button2);
+            this.PanelPersonalInfo.Controls.Add(this.txtPicture);
+            this.PanelPersonalInfo.Controls.Add(this.groupBox1);
+            this.PanelPersonalInfo.Controls.Add(this.label1);
+            this.PanelPersonalInfo.Controls.Add(this.button1);
+            this.PanelPersonalInfo.Controls.Add(this.pictureBox1);
+            this.PanelPersonalInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPersonalInfo.Location = new System.Drawing.Point(0, 0);
+            this.PanelPersonalInfo.Name = "PanelPersonalInfo";
+            this.PanelPersonalInfo.Size = new System.Drawing.Size(926, 411);
+            this.PanelPersonalInfo.TabIndex = 1;
             // 
             // panelLibrary
             // 
+            this.panelLibrary.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelLibrary.Controls.Add(this.groupBox3);
             this.panelLibrary.Controls.Add(this.dgwLibrary);
             this.panelLibrary.Controls.Add(this.groupBox2);
-            this.panelLibrary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLibrary.Location = new System.Drawing.Point(0, 0);
+            this.panelLibrary.Location = new System.Drawing.Point(113, 14);
             this.panelLibrary.Name = "panelLibrary";
-            this.panelLibrary.Size = new System.Drawing.Size(933, 456);
+            this.panelLibrary.Size = new System.Drawing.Size(743, 385);
             this.panelLibrary.TabIndex = 10;
+            this.panelLibrary.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLibrary_Paint);
             // 
             // dgwLibrary
             // 
-            this.dgwLibrary.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgwLibrary.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.dgwLibrary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwLibrary.Location = new System.Drawing.Point(399, 202);
+            this.dgwLibrary.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgwLibrary.Location = new System.Drawing.Point(0, 200);
             this.dgwLibrary.Name = "dgwLibrary";
-            this.dgwLibrary.Size = new System.Drawing.Size(470, 185);
+            this.dgwLibrary.Size = new System.Drawing.Size(743, 185);
             this.dgwLibrary.TabIndex = 1;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox2.Controls.Add(this.btnLibraryUpload);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnLibraryAdd);
             this.groupBox2.Controls.Add(this.txtbItemType);
             this.groupBox2.Controls.Add(this.txtbLibraryItemUrl);
             this.groupBox2.Controls.Add(this.txtbLibraryItemName);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(399, 23);
+            this.groupBox2.Location = new System.Drawing.Point(38, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(319, 173);
+            this.groupBox2.Size = new System.Drawing.Size(244, 185);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Resourses";
@@ -435,7 +445,7 @@
             // btnLibraryUpload
             // 
             this.btnLibraryUpload.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnLibraryUpload.Location = new System.Drawing.Point(251, 45);
+            this.btnLibraryUpload.Location = new System.Drawing.Point(208, 42);
             this.btnLibraryUpload.Name = "btnLibraryUpload";
             this.btnLibraryUpload.Size = new System.Drawing.Size(27, 20);
             this.btnLibraryUpload.TabIndex = 12;
@@ -443,32 +453,33 @@
             this.btnLibraryUpload.UseVisualStyleBackColor = true;
             this.btnLibraryUpload.Click += new System.EventHandler(this.btnLibraryUpload_Click);
             // 
-            // button3
+            // btnLibraryAdd
             // 
-            this.button3.Location = new System.Drawing.Point(169, 133);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnLibraryAdd.Location = new System.Drawing.Point(126, 130);
+            this.btnLibraryAdd.Name = "btnLibraryAdd";
+            this.btnLibraryAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnLibraryAdd.TabIndex = 11;
+            this.btnLibraryAdd.Text = "Add";
+            this.btnLibraryAdd.UseVisualStyleBackColor = true;
+            this.btnLibraryAdd.Click += new System.EventHandler(this.btnLibraryAdd_Click);
             // 
             // txtbItemType
             // 
-            this.txtbItemType.Location = new System.Drawing.Point(144, 107);
+            this.txtbItemType.Location = new System.Drawing.Point(101, 104);
             this.txtbItemType.Name = "txtbItemType";
             this.txtbItemType.Size = new System.Drawing.Size(100, 20);
             this.txtbItemType.TabIndex = 5;
             // 
             // txtbLibraryItemUrl
             // 
-            this.txtbLibraryItemUrl.Location = new System.Drawing.Point(144, 78);
+            this.txtbLibraryItemUrl.Location = new System.Drawing.Point(101, 75);
             this.txtbLibraryItemUrl.Name = "txtbLibraryItemUrl";
             this.txtbLibraryItemUrl.Size = new System.Drawing.Size(100, 20);
             this.txtbLibraryItemUrl.TabIndex = 4;
             // 
             // txtbLibraryItemName
             // 
-            this.txtbLibraryItemName.Location = new System.Drawing.Point(144, 45);
+            this.txtbLibraryItemName.Location = new System.Drawing.Point(101, 42);
             this.txtbLibraryItemName.Name = "txtbLibraryItemName";
             this.txtbLibraryItemName.Size = new System.Drawing.Size(100, 20);
             this.txtbLibraryItemName.TabIndex = 3;
@@ -476,7 +487,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 110);
+            this.label5.Location = new System.Drawing.Point(7, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 2;
@@ -485,7 +496,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 81);
+            this.label4.Location = new System.Drawing.Point(18, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 1;
@@ -494,7 +505,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 48);
+            this.label2.Location = new System.Drawing.Point(3, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 0;
@@ -504,7 +515,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(54, 309);
+            this.button2.Location = new System.Drawing.Point(247, 309);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(173, 35);
             this.button2.TabIndex = 9;
@@ -514,7 +525,7 @@
             // 
             // txtPicture
             // 
-            this.txtPicture.Location = new System.Drawing.Point(387, 269);
+            this.txtPicture.Location = new System.Drawing.Point(580, 269);
             this.txtPicture.Name = "txtPicture";
             this.txtPicture.Size = new System.Drawing.Size(173, 20);
             this.txtPicture.TabIndex = 8;
@@ -524,7 +535,7 @@
             this.groupBox1.Controls.Add(this.lblTeacherName);
             this.groupBox1.Controls.Add(this.lblTeacherSurname);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(54, 49);
+            this.groupBox1.Location = new System.Drawing.Point(247, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(310, 254);
             this.groupBox1.TabIndex = 7;
@@ -571,7 +582,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(144, 23);
+            this.label1.Location = new System.Drawing.Point(337, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(220, 23);
             this.label1.TabIndex = 6;
@@ -581,7 +592,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(387, 302);
+            this.button1.Location = new System.Drawing.Point(580, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 35);
             this.button1.TabIndex = 2;
@@ -592,7 +603,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(387, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(580, 58);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 204);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -605,28 +616,93 @@
             // 
             // MainPanel
             // 
-            this.MainPanel.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.MainPanel.Controls.Add(this.SecondPanel);
+            this.MainPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MainPanel.Controls.Add(this.PanelPersonalInfo);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 26);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(933, 456);
+            this.MainPanel.Size = new System.Drawing.Size(926, 411);
             this.MainPanel.TabIndex = 10;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Location = new System.Drawing.Point(305, 9);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(221, 185);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Delete Resourses";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 138);
+            this.label6.Location = new System.Drawing.Point(10, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Library Item Type";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Library Item Url";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 45);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Library Item Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(105, 41);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(105, 75);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(104, 104);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 8;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(129, 130);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 482);
+            this.ClientSize = new System.Drawing.Size(926, 437);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -636,8 +712,8 @@
             this.Load += new System.EventHandler(this.Teacher_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.SecondPanel.ResumeLayout(false);
-            this.SecondPanel.PerformLayout();
+            this.PanelPersonalInfo.ResumeLayout(false);
+            this.PanelPersonalInfo.PerformLayout();
             this.panelLibrary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwLibrary)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -646,6 +722,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MainPanel.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -690,7 +768,7 @@
         private System.Windows.Forms.ToolStripMenuItem chooseTaskToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem studentListToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem checkSpesifiedStudentsToolStripMenuItem;
-        private System.Windows.Forms.Panel SecondPanel;
+        private System.Windows.Forms.Panel PanelPersonalInfo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTeacherSurname;
         private System.Windows.Forms.Label lblTeacherName;
@@ -712,7 +790,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLibraryUpload;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnLibraryAdd;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button3;
     }
 }

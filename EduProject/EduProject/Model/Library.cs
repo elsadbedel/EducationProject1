@@ -17,6 +17,6 @@ namespace EduProject.Model
         public int LibraryId { get; set; }
         public string LibraryItemName { get; set; }
         public string LibraryItemUrl { get; set; }
-        public bool LibraryItemType { get; set; }
+        public string LibraryItemType { get; set; }
     }
 }

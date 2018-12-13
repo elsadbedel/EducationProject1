@@ -14,7 +14,7 @@ namespace EduProject
 
     public partial class TeacherInfo : Form
     {
-        EducationProject01Entities db = new EducationProject01Entities();
+        EducationProjectEntities2 db = new EducationProjectEntities2();
         public TeacherInfo()
         {
             InitializeComponent();

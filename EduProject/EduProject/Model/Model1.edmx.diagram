@@ -4,36 +4,36 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="99bee4b127624caeb417b15de358f3f0" Name="Diagram1" ZoomLevel="44">
-        <EntityTypeShape EntityType="EducationProject01Model.AssignTask" Width="1.5" PointX="9.5" PointY="13.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Group" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.GroupCategory" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.GroupCategoryType" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Library" Width="1.5" PointX="12.875" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Mentor" Width="1.5" PointX="4.875" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Message" Width="1.5" PointX="14.875" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Package" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Student" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Task" Width="1.5" PointX="15.125" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.TaskCategory" Width="1.5" PointX="12.75" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Teacher" Width="1.5" PointX="3.625" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.Transcript" Width="1.5" PointX="10.875" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.User" Width="1.5" PointX="10.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="EducationProject01Model.UserType" Width="1.5" PointX="8.5" PointY="6" IsExpanded="true" />
-        <AssociationConnector Association="EducationProject01Model.FK_141" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_144" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_48" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_51" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_54" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_57" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_80" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_75" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_110" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_89" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_159" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_129" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_156" ManuallyRouted="false" />
-        <AssociationConnector Association="EducationProject01Model.FK_86" ManuallyRouted="false" />
+      <Diagram DiagramId="471bc999fffa4824bc5a00d62556cbb4" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="EducationProjectModel.AssignTask" Width="1.5" PointX="9.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Group" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.GroupCategory" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.GroupCategoryType" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Library" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Mentor" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Message" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Package" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Student" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Task" Width="1.5" PointX="7.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.TaskCategory" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Teacher" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.Transcript" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.User" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationProjectModel.UserType" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="EducationProjectModel.FK_141" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_144" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_48" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_51" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_54" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_57" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_80" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_75" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_110" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_89" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_159" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_129" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_156" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationProjectModel.FK_86" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -13,7 +13,7 @@ namespace EduProject
 {
     public partial class HomePage : Form
     {
-        EducationProject01Entities db = new EducationProject01Entities();
+        EducationProjectEntities2 db = new EducationProjectEntities2();
 
         public HomePage()
         {
@@ -69,6 +69,11 @@ namespace EduProject
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxHomePAgeUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

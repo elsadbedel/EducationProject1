@@ -9,18 +9,54 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using EduProject.Model;
+using System.IO;
 
 namespace EduProject
 {
     public partial class TeacherForm : Form
     {
-        EducationProject01Entities db = new EducationProject01Entities();
+        EducationProjectEntities2 db = new EducationProjectEntities2(); //Database//
+
+        OpenFileDialog OpenFile = new OpenFileDialog();
+        static string rootDirectory = Directory.GetCurrentDirectory();
+        string uploadFolderPath = Path.Combine(rootDirectory, "Uploads");
+
+
         public TeacherForm()
         {
             InitializeComponent();
+            //Upload ----------- Upload//
+            Directory.CreateDirectory(uploadFolderPath);
+            OpenFile.Title = "Choose File";
+            OpenFile.InitialDirectory = rootDirectory;
+
         }
 
         private void Teacher_Load(object sender, EventArgs e)
+        {
+           
+            ClearPanel();
+        }
+
+        private void BtnGoBack(Panel _btn)
+        {
+            Button btn = new Button() { Text="X"};
+            btn.Top = 5;
+            btn.Left = 5;
+            btn.Height = 15;
+            btn.Width = 15;
+            btn.FlatStyle = FlatStyle.System;
+            btn.Click += btnClick;
+            _btn.Controls.Add(btn);
+            
+        }
+
+        private void btnClick(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+        }
+
+        private void ClearPanel()
         {
             MainPanel.Controls.Clear();
         }
@@ -76,25 +112,86 @@ namespace EduProject
 
         private void editButunMelumatlarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainPanel.Controls.Add(SecondPanel);
+            AddPanelForShow(PanelPersonalInfo);
+            BtnGoBack(PanelPersonalInfo);
         }
 
         private void btnLibraryUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            
-            if (openFile.ShowDialog()==DialogResult.OK)
+            if (OpenFile.ShowDialog() == DialogResult.OK)
             {
-                openFile.ShowDialog();
-                string path = openFile.FileName;
+                string soursePath = OpenFile.FileName;
+                string fileName = Path.GetFileName(soursePath);
+                string destinationPath = uploadFolderPath;
 
-                txtbLibraryItemUrl.Text = path;
+                File.Copy(soursePath, Path.Combine(destinationPath, fileName), true);
+
+                string name = Path.GetFileName(fileName);
+                string path = OpenFile.FileName;
+
+                txtbLibraryItemName.Text = name;
+                txtbLibraryItemUrl.Text = Path.Combine("Uploads", name);
+
             }
+            else
+            {
+                MessageBox.Show("Try again");
+            }
+
+
         }
 
         private void addResourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainPanel.Controls.Add(panelLibrary);
+            AddPanelForShow(panelLibrary);
+            BtnGoBack(panelLibrary);
+        }
+
+        private void AddPanelForShow(Panel _panel)
+        {
+            MainPanel.Controls.Add(_panel);
+        }
+
+        private void panelLibrary_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLibraryAdd_Click(object sender, EventArgs e)
+        {
+            if (txtbLibraryItemName.Text == "" || txtbLibraryItemUrl.Text == "" || txtbItemType.Text == "")
+            {
+                MessageBox.Show("Lütfen Bütün Xanaları Doldurun");
+            }
+            else
+            {
+                string message = "Sorğuların Doğruluğundan Eminsiniz?";
+                string caption = "Sehv Bas verdi";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    // Message//
+                    Library library = new Library()
+                    {
+                        LibraryItemName = txtbLibraryItemName.Text,
+                        LibraryItemUrl = txtbLibraryItemUrl.Text,
+                        LibraryItemType = txtbItemType.Text
+
+                    };
+                    db.Libraries.Add(library);
+                    db.SaveChanges();
+                    dgwLibrary.DataSource = db.Libraries.ToList();
+                    MessageBox.Show("Resurs Ugurla Elave Edildi");
+                }
+
+            }
+
         }
     }
 }

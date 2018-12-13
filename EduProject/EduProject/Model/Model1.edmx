@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EducationProject01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="EducationProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AssignTask">
           <Key>
             <PropertyRef Name="AssignTaskId" />
@@ -47,8 +47,8 @@
           </Key>
           <Property Name="LibraryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LibraryItemName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="LibraryItemUrl" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="LibraryItemType" Type="bit" Nullable="false" />
+          <Property Name="LibraryItemUrl" Type="nvarchar(max)" />
+          <Property Name="LibraryItemType" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Mentor">
           <Key>
@@ -315,7 +315,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EducationProject01ModelStoreContainer">
+        <EntityContainer Name="EducationProjectModelStoreContainer">
           <EntitySet Name="AssignTask" EntityType="Self.AssignTask" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GroupCategory" EntityType="Self.GroupCategory" Schema="dbo" store:Type="Tables" />
@@ -392,7 +392,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="EducationProject01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="EducationProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="AssignTask">
           <Key>
             <PropertyRef Name="AssignTaskId" />
@@ -445,8 +445,8 @@
           </Key>
           <Property Name="LibraryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LibraryItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LibraryItemUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LibraryItemType" Type="Boolean" Nullable="false" />
+          <Property Name="LibraryItemUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LibraryItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Mentor">
           <Key>
@@ -731,7 +731,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EducationProject01Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EducationProjectEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AssignTasks" EntityType="Self.AssignTask" />
           <EntitySet Name="Groups" EntityType="Self.Group" />
           <EntitySet Name="GroupCategories" EntityType="Self.GroupCategory" />
@@ -809,9 +809,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EducationProject01ModelStoreContainer" CdmEntityContainer="EducationProject01Entities">
+        <EntityContainerMapping StorageEntityContainer="EducationProjectModelStoreContainer" CdmEntityContainer="EducationProjectEntities2">
           <EntitySetMapping Name="AssignTasks">
-            <EntityTypeMapping TypeName="EducationProject01Model.AssignTask">
+            <EntityTypeMapping TypeName="EducationProjectModel.AssignTask">
               <MappingFragment StoreEntitySet="AssignTask">
                 <ScalarProperty Name="AssignTaskId" ColumnName="AssignTaskId" />
                 <ScalarProperty Name="TaskId" ColumnName="TaskId" />
@@ -820,7 +820,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Groups">
-            <EntityTypeMapping TypeName="EducationProject01Model.Group">
+            <EntityTypeMapping TypeName="EducationProjectModel.Group">
               <MappingFragment StoreEntitySet="Group">
                 <ScalarProperty Name="GroupId" ColumnName="GroupId" />
                 <ScalarProperty Name="PackageId" ColumnName="PackageId" />
@@ -832,7 +832,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupCategories">
-            <EntityTypeMapping TypeName="EducationProject01Model.GroupCategory">
+            <EntityTypeMapping TypeName="EducationProjectModel.GroupCategory">
               <MappingFragment StoreEntitySet="GroupCategory">
                 <ScalarProperty Name="GroupCategoryId" ColumnName="GroupCategoryId" />
                 <ScalarProperty Name="GroupCategoryTypeId" ColumnName="GroupCategoryTypeId" />
@@ -841,7 +841,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GroupCategoryTypes">
-            <EntityTypeMapping TypeName="EducationProject01Model.GroupCategoryType">
+            <EntityTypeMapping TypeName="EducationProjectModel.GroupCategoryType">
               <MappingFragment StoreEntitySet="GroupCategoryType">
                 <ScalarProperty Name="GroupCategoryTypeId" ColumnName="GroupCategoryTypeId" />
                 <ScalarProperty Name="ProgramCategoryTypeName" ColumnName="ProgramCategoryTypeName" />
@@ -851,7 +851,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Libraries">
-            <EntityTypeMapping TypeName="EducationProject01Model.Library">
+            <EntityTypeMapping TypeName="EducationProjectModel.Library">
               <MappingFragment StoreEntitySet="Library">
                 <ScalarProperty Name="LibraryId" ColumnName="LibraryId" />
                 <ScalarProperty Name="LibraryItemName" ColumnName="LibraryItemName" />
@@ -861,7 +861,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Mentors">
-            <EntityTypeMapping TypeName="EducationProject01Model.Mentor">
+            <EntityTypeMapping TypeName="EducationProjectModel.Mentor">
               <MappingFragment StoreEntitySet="Mentor">
                 <ScalarProperty Name="MentorId" ColumnName="MentorId" />
                 <ScalarProperty Name="PackageId" ColumnName="PackageId" />
@@ -875,14 +875,14 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Messages">
-            <EntityTypeMapping TypeName="EducationProject01Model.Message">
+            <EntityTypeMapping TypeName="EducationProjectModel.Message">
               <MappingFragment StoreEntitySet="Message">
                 <ScalarProperty Name="MessageId" ColumnName="MessageId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Packages">
-            <EntityTypeMapping TypeName="EducationProject01Model.Package">
+            <EntityTypeMapping TypeName="EducationProjectModel.Package">
               <MappingFragment StoreEntitySet="Package">
                 <ScalarProperty Name="PackageId" ColumnName="PackageId" />
                 <ScalarProperty Name="PackageName" ColumnName="PackageName" />
@@ -891,7 +891,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Students">
-            <EntityTypeMapping TypeName="EducationProject01Model.Student">
+            <EntityTypeMapping TypeName="EducationProjectModel.Student">
               <MappingFragment StoreEntitySet="Student">
                 <ScalarProperty Name="StudentId" ColumnName="StudentId" />
                 <ScalarProperty Name="GroupId" ColumnName="GroupId" />
@@ -907,7 +907,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tasks">
-            <EntityTypeMapping TypeName="EducationProject01Model.Task">
+            <EntityTypeMapping TypeName="EducationProjectModel.Task">
               <MappingFragment StoreEntitySet="Task">
                 <ScalarProperty Name="TaskId" ColumnName="TaskId" />
                 <ScalarProperty Name="TaskName" ColumnName="TaskName" />
@@ -920,7 +920,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TaskCategories">
-            <EntityTypeMapping TypeName="EducationProject01Model.TaskCategory">
+            <EntityTypeMapping TypeName="EducationProjectModel.TaskCategory">
               <MappingFragment StoreEntitySet="TaskCategory">
                 <ScalarProperty Name="TaskCategoryId" ColumnName="TaskCategoryId" />
                 <ScalarProperty Name="TaskCategoryName" ColumnName="TaskCategoryName" />
@@ -928,7 +928,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Teachers">
-            <EntityTypeMapping TypeName="EducationProject01Model.Teacher">
+            <EntityTypeMapping TypeName="EducationProjectModel.Teacher">
               <MappingFragment StoreEntitySet="Teacher">
                 <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
                 <ScalarProperty Name="PackageId" ColumnName="PackageId" />
@@ -942,7 +942,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Transcripts">
-            <EntityTypeMapping TypeName="EducationProject01Model.Transcript">
+            <EntityTypeMapping TypeName="EducationProjectModel.Transcript">
               <MappingFragment StoreEntitySet="Transcript">
                 <ScalarProperty Name="TranscriptId" ColumnName="TranscriptId" />
                 <ScalarProperty Name="TaskId" ColumnName="TaskId" />
@@ -952,7 +952,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="EducationProject01Model.User">
+            <EntityTypeMapping TypeName="EducationProjectModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
@@ -960,7 +960,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserTypes">
-            <EntityTypeMapping TypeName="EducationProject01Model.UserType">
+            <EntityTypeMapping TypeName="EducationProjectModel.UserType">
               <MappingFragment StoreEntitySet="UserType">
                 <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
                 <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
