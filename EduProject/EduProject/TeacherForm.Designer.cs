@@ -89,6 +89,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SecondPanel.SuspendLayout();
             this.panelLibrary.SuspendLayout();
@@ -415,6 +416,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.btnLibraryUpload);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.txtbItemType);
@@ -611,6 +613,15 @@
             this.MainPanel.Size = new System.Drawing.Size(933, 456);
             this.MainPanel.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(50, 138);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "label6";
+            // 
             // TeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -702,5 +713,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLibraryUpload;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
     }
 }
