@@ -14,13 +14,13 @@ namespace EduProject
 
     public partial class TeacherInfo : Form
     {
-        EducationProjectEntities1 db = new EducationProjectEntities1();
+        EducationProject01Entities db = new EducationProject01Entities();
         public TeacherInfo()
         {
             InitializeComponent();
         }
 
-       
+
 
         private void TeacherInfo_Load(object sender, EventArgs e)
         {

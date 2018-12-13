@@ -1,6 +1,6 @@
 ﻿namespace EduProject
 {
-    partial class RegitrationForm
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegitrationForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbxRegistrationChooseUserType = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,6 +49,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnRegistrationFullControl = new System.Windows.Forms.Button();
+            this.btnRegistrationBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,24 +59,13 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label10.Location = new System.Drawing.Point(35, 47);
+            this.label10.Location = new System.Drawing.Point(429, 75);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(506, 49);
+            this.label10.Size = new System.Drawing.Size(236, 23);
             this.label10.TabIndex = 1;
             this.label10.Text = "Create a New Account";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(257, 105);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(274, 23);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "It’s free and always will be.";
             // 
             // panel1
             // 
@@ -96,7 +87,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(84, 162);
+            this.panel1.Location = new System.Drawing.Point(97, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(429, 290);
             this.panel1.TabIndex = 21;
@@ -108,6 +99,8 @@
             this.cmbxRegistrationChooseUserType.Name = "cmbxRegistrationChooseUserType";
             this.cmbxRegistrationChooseUserType.Size = new System.Drawing.Size(121, 21);
             this.cmbxRegistrationChooseUserType.TabIndex = 41;
+            this.cmbxRegistrationChooseUserType.Text = "Choose User Type";
+            this.cmbxRegistrationChooseUserType.SelectedIndexChanged += new System.EventHandler(this.cmbxRegistrationChooseUserType_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -257,7 +250,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(519, 418);
+            this.button1.Location = new System.Drawing.Point(532, 357);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 34);
             this.button1.TabIndex = 22;
@@ -267,27 +260,71 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(519, 162);
+            this.pictureBox1.Location = new System.Drawing.Point(532, 101);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 250);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label6.Location = new System.Drawing.Point(100, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 32);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Admin Panel";
+            // 
+            // btnRegistrationFullControl
+            // 
+            this.btnRegistrationFullControl.BackColor = System.Drawing.Color.Olive;
+            this.btnRegistrationFullControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrationFullControl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRegistrationFullControl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegistrationFullControl.Location = new System.Drawing.Point(544, 40);
+            this.btnRegistrationFullControl.Name = "btnRegistrationFullControl";
+            this.btnRegistrationFullControl.Size = new System.Drawing.Size(121, 32);
+            this.btnRegistrationFullControl.TabIndex = 25;
+            this.btnRegistrationFullControl.Text = "Full Control";
+            this.btnRegistrationFullControl.UseVisualStyleBackColor = false;
+            this.btnRegistrationFullControl.Click += new System.EventHandler(this.btnRegistrationFullControl_Click);
+            // 
+            // btnRegistrationBack
+            // 
+            this.btnRegistrationBack.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRegistrationBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrationBack.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRegistrationBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegistrationBack.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrationBack.Image")));
+            this.btnRegistrationBack.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRegistrationBack.Location = new System.Drawing.Point(3, 3);
+            this.btnRegistrationBack.Name = "btnRegistrationBack";
+            this.btnRegistrationBack.Size = new System.Drawing.Size(151, 32);
+            this.btnRegistrationBack.TabIndex = 26;
+            this.btnRegistrationBack.Text = "Home Page";
+            this.btnRegistrationBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistrationBack.UseVisualStyleBackColor = false;
+            this.btnRegistrationBack.Click += new System.EventHandler(this.btnRegistrationBack_Click);
+            // 
             // RegitrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(728, 485);
+            this.ClientSize = new System.Drawing.Size(675, 401);
+            this.Controls.Add(this.btnRegistrationBack);
+            this.Controls.Add(this.btnRegistrationFullControl);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label10);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegitrationForm";
-            this.Text = "RegitrationForm";
+            this.Text = "RegistrationForm";
             this.Load += new System.EventHandler(this.RegitrationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -299,7 +336,6 @@
 
         #endregion
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbxRegistrationChooseUserType;
         private System.Windows.Forms.Label label8;
@@ -319,5 +355,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnRegistrationFullControl;
+        private System.Windows.Forms.Button btnRegistrationBack;
     }
 }

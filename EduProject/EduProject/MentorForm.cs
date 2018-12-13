@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace EduProject
 {
-    public partial class RegitrationForm : Form
+    public partial class MentorForm : Form
     {
-        public RegitrationForm()
+        public MentorForm()
         {
             InitializeComponent();
         }
 
-        private void RegitrationForm_Load(object sender, EventArgs e)
+        private void toTeacherToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            cmbxRegistrationChooseUserType.Items.Insert(0, "Choose User Type");
-            cmbxRegistrationChooseUserType.SelectedIndex = 0;
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Red;
         }
     }
 }

@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EduProject
+namespace TestExcel
 {
     static class Program
     {
@@ -16,10 +16,7 @@ namespace EduProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomePage());
-
-
-            Console.WriteLine("baba");
+            Application.Run(new filescreenForm());
         }
     }
 }

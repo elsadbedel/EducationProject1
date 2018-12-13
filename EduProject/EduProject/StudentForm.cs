@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace EduProject
 {
-    public partial class Form1 : Form
+    public partial class StudentForm : Form
     {
-        public Form1()
+        public StudentForm()
         {
             InitializeComponent();
         }
-
-        private void personalInfoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = new TeacherInfo();
-            form.ShowDialog();
-        }
-
-        
     }
 }

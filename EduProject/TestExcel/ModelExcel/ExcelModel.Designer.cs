@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\elsad\Source\Repos\EducationProject1\EduProject\EduProject\Model\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\elsad\Source\Repos\EducationProject1\EduProject\TestExcel\ModelExcel\ExcelModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

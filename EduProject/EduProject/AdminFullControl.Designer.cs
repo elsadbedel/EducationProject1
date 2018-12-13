@@ -1,6 +1,6 @@
 ﻿namespace EduProject
 {
-    partial class Form1
+    partial class AdminFullControl
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminFullControl));
             this.taskInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.writeAMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.messagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,6 +150,7 @@
             this.teacherInfoToolStripMenuItem.Name = "teacherInfoToolStripMenuItem";
             this.teacherInfoToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.teacherInfoToolStripMenuItem.Text = "Teacher Info";
+            this.teacherInfoToolStripMenuItem.Click += new System.EventHandler(this.teacherInfoToolStripMenuItem_Click);
             // 
             // libraryToolStripMenuItem
             // 
@@ -221,7 +222,7 @@
             this.libraryToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(564, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(609, 24);
             this.menuStrip2.TabIndex = 7;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -239,19 +240,19 @@
             // personalInfoToolStripMenuItem
             // 
             this.personalInfoToolStripMenuItem.Name = "personalInfoToolStripMenuItem";
-            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personalInfoToolStripMenuItem.Text = "Personal Info";
             this.personalInfoToolStripMenuItem.Click += new System.EventHandler(this.personalInfoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // tasjToolStripMenuItem
@@ -266,8 +267,9 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(129, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "Add Task";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // showTaskToolStripMenuItem
             // 
@@ -276,7 +278,7 @@
             this.toolStripMenuItem4,
             this.updateTaskToolStripMenuItem});
             this.showTaskToolStripMenuItem.Name = "showTaskToolStripMenuItem";
-            this.showTaskToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.showTaskToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.showTaskToolStripMenuItem.Text = "Show Task";
             // 
             // taskListToolStripMenuItem
@@ -375,17 +377,18 @@
             // 
             this.teacherBindingSource.DataMember = "Teacher";
             // 
-            // Form1
+            // AdminFullControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(564, 352);
+            this.ClientSize = new System.Drawing.Size(609, 352);
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "AdminFullControl";
+            this.Text = "Full Control";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
